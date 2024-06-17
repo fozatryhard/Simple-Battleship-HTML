@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battleship Game</title>
+  <style>
+    .game-board {
+      display:grid;
+      grid-template-columns: repeat(10, 20px);
+      grid-template-rows: repeat(10, 20px);
+      margin-bottom: 10px;
+      width: 10;
+      height: 10;
+    }
+
+    .block {
+      width: 20px;
+      height: 20px;
+      border: 1px solid #000;
+    }
+
+    .taken {
+      background-color: pink;
+    }
+
+    .boom {
+      background-color: red;
+    }
+
+    .empty {
+      background-color: lightblue;
+    }
+
+    .hover {
+      background-color: yellow;
+    }
+
+    .ship {
+      display:flex;
+      justify-content:center;
+      justify-items: auto;
+    }
+
+    .ship-block {
+      width: 20px;
+      height: 20px;
+      background-color: blue;
+      margin: 1px;
+    }
+  </style>
+</head>
+<body>
+  <div id="gamesboard-container"></div>
+  <div class="option-container">
+    <div class="ship" id="0" draggable="true" data-id="0">
+      <div class="ship-block"></div>
+      <div class="ship-block"></div>
+    </div>
+    <div class="ship" id="1" draggable="true" data-id="1">
+      <div class="ship-block"></div>
+      <div class="ship-block"></div>
+      <div class="ship-block"></div>
+    </div>
+    <div class="ship" id="2" draggable="true" data-id="2">
+      <div class="ship-block"></div>
+      <div class="ship-block"></div>
+      <div class="ship-block"></div>
+    </div>
+    <div class="ship" id="3" draggable="true" data-id="3">
+      <div class="ship-block"></div>
+      <div class="ship-block"></div>
+      <div class="ship-block"></div>
+      <div class="ship-block"></div>
+    </div>
+    <div class="ship" id="4" draggable="true" data-id="4">
+      <div class="ship-block"></div>
+      <div class="ship-block"></div>
+      <div class="ship-block"></div>
+      <div class="ship-block"></div>
+      <div class="ship-block"></div>
+    </div>
+  </div>
+  <button id="flip-button">Flip Ships</button>
+  <button id="start-button">Start Game</button>
+  <nav>Info: </nav><div id="info"></div>
+  <nav>Turn: </nav><div id="turn-display"></div>
+
+  <script src="apppp.js"></script>
+</body>
+</html>
